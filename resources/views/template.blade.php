@@ -20,5 +20,8 @@
             </div>
         </div>
     </nav>
+    <div>
+        <p>Bienvenue sur le site</p>
+    </div>
     @endsection
 </body>
