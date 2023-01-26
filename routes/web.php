@@ -22,4 +22,10 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('/template', function(){
+    return view('template');
+})->name('template');
 
+Route::get('/accueil', function(){
+    return view('accueil');
+})->name('accueil');
