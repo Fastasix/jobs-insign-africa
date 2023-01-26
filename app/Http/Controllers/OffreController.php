@@ -13,7 +13,8 @@ class OffreController extends Controller
      */
     public function index()
     {
-        //
+        $offres = DB::table('offres')->get();
+        return view('accueil');
     }
 
     /**
