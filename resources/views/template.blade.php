@@ -12,7 +12,7 @@
 <section>
 <nav class="nav-menu">
     <div class="menu-select">
-        <div class="home-link"><img src="{{asset('assets/image/logo.png')}}" alt="logo"></div>
+        <div class="home-link"><a href="{{route('accueil')}}"><img src="{{asset('assets/image/logo.png')}}" alt="logo"></a></div>
     </div>
     <div class="menu-level">
         <ul class="list-menu">
@@ -36,7 +36,8 @@
             <p>@ copyright Insign Africa</p>
         </div>
         <div class="footer-social-media">
-
+            <a href="https://www.youtube.com/@insignafrica3816">
+            <img src="{{asset('assets/image/youtube.png')}}" alt="youtube"></a>
         </div>
     </div>
 </footer>
