@@ -5,7 +5,7 @@
     <title>Accueil - Job Insign Africa</title>
 </head>
 <body>
-    @section('test')
+    @section('contenu')
     @endsection
 </body>
 </html>

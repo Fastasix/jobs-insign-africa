@@ -2,19 +2,31 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
-  <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <title>template</title>
+  <link href="{{ asset('assets/css/template.css') }}" rel="stylesheet">
 </head>
-<body style="margin-right:2%;margin-left:2%;">
-
-    <br><br>
-    @section('test')
-        Jobs Insign Africa
+<body>
+    @section('navbar')
     @show
-<p class="border border-dark"></p>
 @section('contenu')
+<nav class="nav-menu">
+    <div class="menu-select">
+        <div class="home-link"><img src="{{asset('assets/image/logo.png')}}" alt="logo"></div>
+    </div>
+    <div class="menu-level">
+        <ul class="list-menu">
+            <li><a href="#" class="link-underline-eraser">Qui sommes nous ?</a></li>
+            <li><span class="separate-black-line"></span></li>
+            <li><a href="#" class="link-underline-eraser">Qui sommes nous ?</a></li>
+            <li><span class="separate-black-line"></span></li>
+            <li><a href="#" class="link-underline-eraser">Qui sommes nous ?</a></li>
+            <li><span class="separate-black-line"></span></li>
+            <li><a href="#" class="link-underline-eraser">Qui sommes nous ?</a></li>
+            <li><span class="separate-black-line"></span></li>
+            <li><a href="#" class="link-underline-eraser">Qui sommes nous ?</a></li>
+        </ul>
+    </div>
+</nav>
 @show
 </body>
 </html>
