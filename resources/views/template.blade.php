@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>template</title>
+  <link rel="shortcut icon" href="{{asset('assets/image/logo-insign.svg')}}" type="image/x-icon">
   <link href="{{ asset('assets/css/template.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -29,6 +30,7 @@
 </section>
 @show
 @section('footer')
+@show
 <section>
 <footer class="footer-class">
     <div class="footer-end">
@@ -42,6 +44,5 @@
     </div>
 </footer>
 <section>
-@show
 </body>
 </html>
