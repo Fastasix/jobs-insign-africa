@@ -33,16 +33,14 @@
 @show
 <section>
 <footer class="footer-class">
-    <div class="footer-end">
-        <div class="footer-copyright">
-            <p>@ copyright Insign Africa</p>
-        </div>
+        <div class="footer-copyright">@ copyright Insign Africa</div>
         <div class="footer-social-media">
             <a href="https://www.youtube.com/@insignafrica3816">
-            <img src="{{asset('assets/image/youtube.png')}}" alt="youtube"></a>
+                <img src="{{asset('assets/image/youtube.png')}}" alt="youtube">
+            </a>
         </div>
     </div>
-</footer>
 <section>
+    @section('contenu')
 </body>
 </html>

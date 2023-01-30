@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Offre;
 
 class OffreController extends Controller
 {
@@ -13,8 +14,13 @@ class OffreController extends Controller
      */
     public function index()
     {
-        $offres = DB::table('offres')->get();
-        return view('accueil');
+        $offres = Offre::all();
+        return view('accueil', compact('offres'));
+    }
+
+    public function count(){
+        $offrescount = Offre::all()->count();
+        return view('accueil', compact('offrescount'));
     }
 
     /**

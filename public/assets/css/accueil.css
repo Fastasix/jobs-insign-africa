@@ -1,0 +1,43 @@
+.home{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.div-job-counter {
+    border-color: yellow;
+    background-color: yellow;
+    height: 110px;
+    width: 980px;
+    position: relative;
+    top: 105px;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.counter{
+    top: 45px;
+    position: relative;
+    text-align: center;
+    font-style:italic;
+}
+.first-part-2 {
+    width: 980px;
+    height: 110px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+    top: 130px;
+    column-count: 2;
+}
+.job-search-section {
+    width: 675px;
+    height: 120px;
+    background-color: orange;
+    position: relative;
+    display: flex;
+}
+.apply-job{
+    width:200px;
+    height:100px;
+    background-color:orange;
+    position:relative;
+}

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OffreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('accueil');
 });
 
 
@@ -26,6 +27,5 @@ Route::get('/template', function(){
     return view('template');
 })->name('template');
 
-Route::get('/accueil', function(){
-    return view('accueil');
-})->name('accueil');
+Route::get('/', [OffreController::class, 'index'])->name('accueil');
+Route::get('/', [OffreController::class, 'count'])->name('accueil');
