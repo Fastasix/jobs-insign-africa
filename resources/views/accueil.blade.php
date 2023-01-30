@@ -34,6 +34,15 @@
                 </form>
             </div>
         </div>
+        <div class="apply-job">
+            <div class="apply-job-title"><h4>Je dépose une candidature</h4></div>
+            <div class="apply-job-button"><a href="#">Je postule</a></div>
+        </div>
+        <div class="last-job-posted">
+            <div class="last-job-posted-title">
+                <h3>Les dernières offres</h3>
+            </div>
+        </div>
     </section>
 @section('footer')
 @endsection

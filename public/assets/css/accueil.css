@@ -29,12 +29,6 @@
     left: 462px;
     top: 140px;
 }
-.apply-job{
-    width:200px;
-    height:100px;
-    background-color:orange;
-    position:relative;
-}
 .title-section-search-job {
     position: relative;
     top: 25px;
@@ -70,4 +64,46 @@
 }
 .search-button{
     background:none;
+}
+.apply-job {
+    margin-left: auto;
+    width: 275px;
+    height: 120px;
+    background-color: white;
+    position: relative;
+    border: 6px;
+    box-shadow: 1px 1px 6px #555;
+    border-color: black;
+    top: -1px;
+    right: 460px;
+}
+.apply-job-title {
+    position: relative;
+    top: 25px;
+    left: 20px;
+}
+.apply-job-button {
+    background-color: yellow;
+    padding: 5px;
+    max-width: fit-content;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    top: 25px;
+    position: relative;
+    left: 85px;
+}
+.last-job-posted {
+    width: 980px;
+    height: 180px;
+    background-color: white;
+    position: relative;
+    border: 6px;
+    box-shadow: 1px 1px 6px #555;
+    border-color: black;
+    left: 462px;
+    top: 55px;
+}
+.last-job-posted-title{
+
 }
