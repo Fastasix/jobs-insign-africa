@@ -13,9 +13,25 @@
         <div class="div-job-counter">
             <h2 class="counter">Il y a actuellement {{$offrescount}} offres</h2>
         </div>
-        <div class="first-part-2">
-            <div class="job-search-section">
-
+        <div class="job-search-section">
+            <div class="title-section-search-job"><h3>Je recherche une offre</h3></div>
+            <div class="separate-black-line-select"></div>
+            <div class="select-positions">
+                <form action="{{route('recherchejob')}}" method="GET">
+                    <select class="select-type-job" name="fonction">
+                        <option>Fonctions</option>
+                        <option value="Administratif et comptable">Administratif et comptable</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Création Graphique">Création Graphique</option>
+                        <option value="Développement">Développement</option>
+                        <option value="Rédactionnel">Rédactionnel</option>
+                    </select>
+                    <select class="select-country-job" name="pays">
+                        <option>Pays</option>
+                        <option value="Sénégal">Sénégal</option>
+                    </select>
+                    <input type="submit" value="Recherche" class="search-button">
+                </form>
             </div>
         </div>
     </section>

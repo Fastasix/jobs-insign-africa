@@ -3,7 +3,7 @@
 }
 .div-job-counter {
     border-color: yellow;
-    background-color: yellow;
+    background-color: rgba(255, 234, 0, 0.898);
     height: 110px;
     width: 980px;
     position: relative;
@@ -11,33 +11,63 @@
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 1px 1px 6px #555;
 }
 .counter{
     top: 45px;
     position: relative;
     text-align: center;
-    font-style:italic;
-}
-.first-part-2 {
-    width: 980px;
-    height: 110px;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: black;
-    top: 130px;
-    column-count: 2;
 }
 .job-search-section {
     width: 675px;
     height: 120px;
-    background-color: orange;
+    background-color: white;
     position: relative;
-    display: flex;
+    border: 6px;
+    box-shadow: 1px 1px 6px #555;
+    border-color: black;
+    left: 462px;
+    top: 140px;
 }
 .apply-job{
     width:200px;
     height:100px;
     background-color:orange;
     position:relative;
+}
+.title-section-search-job {
+    position: relative;
+    top: 25px;
+    left: 45px;
+}
+.select-positions {
+    position: relative;
+    left: 40px;
+}
+.select-type-job{
+    border: 1px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 6px 6px 6px;
+    size:2em;
+}
+.select-country-job{
+    border: 1px;
+    border-color:black;
+    border-style: solid;
+    border-radius: 6px 6px 6px;
+    size:2em;
+}
+.separate-black-line-select {
+    border-left: 2px solid #000;
+    display: flex;
+    margin: 23px 2px;
+    height: 0;
+    width: 138px;
+    left: 42px;
+    top: 10px;
+    position: relative;
+}
+.search-button{
+    background:none;
 }

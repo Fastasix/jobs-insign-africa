@@ -50,9 +50,12 @@ class OffreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function recherche(Request $request)
     {
-        //
+        $fonction = $request->input('fonction');
+        $pays = $request->input('pays');
+        $research = Offre::select()->where('fonction', $fonction)->where('pays', $pays);
+        return view('recherche', compact('research'));
     }
 
     /**
