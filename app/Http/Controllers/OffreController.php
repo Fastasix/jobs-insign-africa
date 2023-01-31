@@ -54,7 +54,8 @@ class OffreController extends Controller
     {
         $fonction = $request->input('fonction');
         $pays = $request->input('pays');
-        $research = Offre::select()->where('fonction', $fonction)->where('pays', $pays);
+        $groupe = ['fonction' => $fonction, 'pays' => $pays];
+        $research = Offre::all()->where($groupe);
         return view('recherche', compact('research'));
     }
 

@@ -30,4 +30,4 @@ Route::get('/template', function(){
 Route::get('/', [OffreController::class, 'index'])->name('accueil');
 Route::get('/', [OffreController::class, 'count'])->name('accueil');
 
-Route::get('/recherche', [OffreController::class, 'recherche'])->name('recherchejob');
+Route::post('/recherche', [OffreController::class, 'recherche'])->name('recherchejob');
