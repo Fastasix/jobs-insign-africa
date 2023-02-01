@@ -1,20 +1,61 @@
-@dd($research)
 @extends('template')
 @section('navbar')
 @endsection
 @section('contenu')
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Accueil - Recherche job</title>
-    <link rel="stylesheet" href="{{asset('assets/css/accueil.css')}}">
-</head>
-<body>
-    <section class="home">
-        @foreach($research as $liste)
-            <p>{{$liste->titre}}</p>
-        @endforeach
-    </section>
-</body>
+<section class="home">
+    <div class="search-result">
+        <div class="search-result-title">
+            @if (!empty($research) && count($research) > 0)
+            <h2 class="search-result-title-position">
+                Résultat de recherche pour :
+                    "{{$fonctioncles}}"
+                    au
+                    "{{$payscles}}"
+            </h2>
+            @else
+            <h2 class="search-result-title-position">
+                Aucun résultat. Essayer de rentrer d'autres informations
+            </h2>
+            @endif
+        </div>
+        <div class="hr-style-cut"></div>
+        <div class="title-new-search-suggestion">
+            <h3>Effectuer une nouvelle recherche :</h3>
+        </div>
+        <div class="hr-style-cut-2"></div>
+        <div class="select-positions">
+            <form action="{{route('recherchejob')}}" method="POST">
+                @csrf
+                <select class="select-type-job" name="fonction">
+                    <option>Fonctions</option>
+                    <option value="Administratif et comptable">Administratif et comptable</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Création Graphique">Création Graphique</option>
+                    <option value="Développement">Développement</option>
+                    <option value="Rédactionnel">Rédactionnel</option>
+                </select>
+                <select class="select-country-job" name="pays">
+                    <option>Pays</option>
+                    <option value="Sénégal">Sénégal</option>
+                </select>
+                <input type="submit" value="Recherche" class="search-button">
+            </form>
+        </div>
+        <div class="search-result-presentation">
+            @foreach($research as $resultshow)
+            <div class="container-research">
+
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 @section('footer')
 @endsection
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = "{{asset('assets/css/recherche.css')}}";
+    document.getElementsByTagName('HEAD')[0].appendChild(link);
+</script>

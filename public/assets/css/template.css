@@ -37,9 +37,9 @@ body {
     padding: 8px;
 }
 .menu-level {
-    position: relative;
+    position: absolute;
     left: 620px;
-    bottom: 148px;
+    bottom: -8px;
 }
 .link-underline-eraser{
     text-decoration:none;

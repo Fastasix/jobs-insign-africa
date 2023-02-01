@@ -2,14 +2,13 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>template</title>
+  <title>Insign Africa Jobs</title>
   <link rel="shortcut icon" href="{{asset('assets/image/logo-insign.svg')}}" type="image/x-icon">
   <link href="{{ asset('assets/css/template.css') }}" rel="stylesheet">
 </head>
 <body>
     @section('navbar')
     @show
-@section('contenu')
 <section>
 <nav class="nav-menu">
     <div class="menu-select">
@@ -28,9 +27,7 @@
     </div>
 </nav>
 </section>
-@show
-@section('footer')
-@show
+@yield('contenu')
 <section>
 <footer class="footer-class">
         <div class="footer-copyright">@ copyright Insign Africa</div>
@@ -41,6 +38,5 @@
         </div>
     </div>
 <section>
-    @section('contenu')
 </body>
 </html>

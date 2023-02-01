@@ -55,8 +55,12 @@
     size: 2em;
     padding: 3px;
 }
-.search-button{
-    background:none;
+.search-button {
+    background: none;
+    position: relative;
+    left: 105px;
+    border-radius: 8px;
+    padding: 3px;
 }
 .apply-job {
     margin-left: auto;
@@ -156,5 +160,5 @@
 .offer-number-position {
     bottom: 0px;
     position: relative;
-    top: 10px;
+    top: 11px;
 }

@@ -52,11 +52,10 @@ class OffreController extends Controller
      */
     public function recherche(Request $request)
     {
-        $fonction = $request->input('fonction');
-        $pays = $request->input('pays');
-        $groupe = ['fonction' => $fonction, 'pays' => $pays];
-        $research = Offre::all()->where($groupe);
-        return view('recherche', compact('research'));
+        $fonctioncles = $request->input('fonction');
+        $payscles = $request->input('pays');
+        $research = Offre::where('fonction','LIKE',"%{$fonctioncles}%")->where('pays', 'LIKE', "%{$payscles}%")->get();
+        return view('recherche', compact('research', 'fonctioncles', 'payscles'));
     }
 
     /**

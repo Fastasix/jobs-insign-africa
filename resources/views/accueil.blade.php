@@ -1,14 +1,6 @@
 @extends('template')
 @section('navbar')
-
 @section('contenu')
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Accueil - Job Insign Africa</title>
-    <link rel="stylesheet" href="{{asset('assets/css/accueil.css')}}">
-</head>
-<body>
     <section class="home">
         <div class="div-job-counter">
             @if ($offrescount >= 1)
@@ -59,5 +51,10 @@
     </section>
 @section('footer')
 @endsection
-</body>
-</html>
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = "{{asset('assets/css/accueil.css')}}";
+    document.getElementsByTagName('HEAD')[0].appendChild(link);
+</script>
