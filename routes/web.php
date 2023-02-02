@@ -27,7 +27,10 @@ Route::get('/template', function(){
     return view('template');
 })->name('template');
 
-Route::get('/', [OffreController::class, 'index'])->name('accueil');
-Route::get('/', [OffreController::class, 'count'])->name('accueil');
+Route::get('/', [OffreController::class, 'offrecountrech'])->name('accueil');
 
 Route::post('/recherche', [OffreController::class, 'recherche'])->name('recherchejob');
+
+/* Route::get('/candidature', [CandidatureController::class, '']); */
+
+Route::get('/offre/{id}', [OffreController::class, 'rechoffre'])->name('detailoffre');

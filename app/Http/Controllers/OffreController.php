@@ -18,11 +18,6 @@ class OffreController extends Controller
         return view('accueil', compact('offres'));
     }
 
-    public function count(){
-        $offrescount = Offre::all()->count();
-        return view('accueil', compact('offrescount'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -56,6 +51,17 @@ class OffreController extends Controller
         $payscles = $request->input('pays');
         $research = Offre::where('fonction','LIKE',"%{$fonctioncles}%")->where('pays', 'LIKE', "%{$payscles}%")->get();
         return view('recherche', compact('research', 'fonctioncles', 'payscles'));
+    }
+
+    public function offrecountrech(){
+        $offrescount = Offre::all()->count();
+        $rechercherecent = Offre::orderBy('date_emission', 'DESC')->take(3)->get();
+        return view('accueil', compact('offrescount','rechercherecent'));
+    }
+
+    public function rechoffre($id){
+        $offreid = Offre::where('id', $id)->first();
+        return view('offre', compact('offreid'));
     }
 
     /**

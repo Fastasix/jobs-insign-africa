@@ -10,6 +10,8 @@
     top: 120px;
     box-shadow: 1px 1px 6px #555;
     border-color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 200px;
 }
 .search-result-title {
     position: relative;
@@ -18,22 +20,27 @@
     display: flex;
 }
 .search-result-presentation {
-    height: fit-content;
     position: relative;
     display: flex;
-    gap: 50px 50px;
+    gap: 25px;
+    top: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 55px;
     flex-wrap: wrap;
-    margin-top: 60px;
 }
 .container-research {
-    border-color: black;
-    width: 356px;
-    height: 230px;
-    border-style: solid;
     position: relative;
-    margin-left: 47px;
-    margin-right: 47px;
-    margin-bottom: 35px;
+    border-style: solid;
+    border-color: black;
+    width: 627px;
+    height: 155px;
+    padding: 20px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-top: 0;
 }
 .search-result-title-position{
     position: relative;

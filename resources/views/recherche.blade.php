@@ -44,7 +44,9 @@
         <div class="search-result-presentation">
             @foreach($research as $resultshow)
             <div class="container-research">
-
+                <div class="research-title"><h2>{{$resultshow->titre}}</h2></div>
+                <div class="research-contract"><h3>{{$resultshow->contrat}}</h3></div>
+                <div class="research-pays"><h4>{{$resultshow->pays}}</h4></div>
             </div>
             @endforeach
         </div>
