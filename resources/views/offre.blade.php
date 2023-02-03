@@ -1,20 +1,31 @@
+@php
+    $offreidpre = $offreid->id - 1;
+    $offreidsuiv = $offreid->id + 1;
+@endphp
 @extends('template')
-@section('navbar')
 @section('contenu')
-
 <section class="home">
     <div class="position-container-offre">
         <div class="title-container-offer">
             <div class="title-position-offer">Descriptif de l'offre : {{$offreid->titre}}</div>
             <div class="offer-reference"> Référence de l'offre : {{$offreid->reference_offre}}</div>
+            <div class="offer-country"> Pays : {{$offreid->pays}}</div>
+            <div class="apply-day-offer"> Date d'échéance : {{$offreid->date_echeance}}</div>
+            <div class="created-date"> Date d'émission : {{$offreid->date_emission}}</div>
         </div>
-        <div class="">
-            <div class=""></div>
+        <div class="text-position-offer">
+            <div class="title-text">Descriptif du poste :</div>
+            <div class="text-offer">{{$offreid->description_poste}}</div>
+            <div class="apply-offer-button-position">
+                <div class="offer-apply-button"><a href="{{route('postuleroffre')}}" class="text-decoration-a">Je postule</a></div>
+                <div class="position-back-for-button">
+                        <a href="{{route('detailoffre', [$offreidpre])}}"><img src="{{asset('assets/image/left-arrow.png')}}" alt="backward-arrow" title="Offre précédente"></a>
+                        <a href="{{route('detailoffre', [$offreidsuiv])}}"><img src="{{asset('assets/image/right-arrow.png')}}" alt="forward-arrow" title="Offre suivante"></a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
-@section('footer')
 @endsection
 <script>
     var link = document.createElement('link');

@@ -1,8 +1,4 @@
-@php
-    $cross = "<div class='cross-see-more'>aaa</div>"
-@endphp
 @extends('template')
-@section('navbar')
 @section('contenu')
     <section class="home">
         <div class="div-job-counter">
@@ -56,7 +52,7 @@
                         <div class="last-job-apply-date"><h5> Date d'échéance : {{$troisjobs->date_echeance}}</h5></div>
                         <div class="last-job-created-date"><h5>Date d'émission : {{$troisjobs->date_emission}}</h5></div>
                         <form action="{{route('detailoffre', [$troisjobs->id])}}" method="get">
-                        <input type="submit" name="{{$troisjobs->id}}" class="link-format-cross" value="@php echo $cross @endphp">
+                        <input type="submit" name="{{$troisjobs->id}}" class="link-format-cross" value="+">
                         </form>
                     </div>
                     @endforeach
@@ -65,7 +61,6 @@
         </div>
     </div>
     </section>
-@section('footer')
 @endsection
 <script>
     var link = document.createElement('link');

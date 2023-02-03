@@ -12,7 +12,7 @@
 <section>
 <nav class="nav-menu">
     <div class="menu-select">
-        <div class="home-link"><a href="{{route('accueil')}}"><img src="{{asset('assets/image/logo.png')}}" alt="logo"></a></div>
+        <div class="home-link"><a href="{{route('accueil')}}"><img src="{{asset('assets/image/logo.png')}}" alt="logo" class="home-icon-style"></a></div>
     </div>
     <div class="menu-level">
         <ul class="list-menu">

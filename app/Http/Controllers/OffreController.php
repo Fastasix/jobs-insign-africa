@@ -61,7 +61,14 @@ class OffreController extends Controller
 
     public function rechoffre($id){
         $offreid = Offre::where('id', $id)->first();
-        return view('offre', compact('offreid'));
+        if($offreid){
+            $offreidpre = Offre::where('id', '<', $offreid->id)->max('id');
+            $offreidsuiv = Offre::where('id', '>', $offreid->id)->min('id');
+            return view('offre', compact('offreid', 'offreidpre', 'offreidsuiv'));
+        }
+        else{
+            return redirect()->route('accueil');
+        }
     }
 
     /**

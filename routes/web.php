@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('accueil');
 });
 
+Route::get('/candidature', function () {
+    return view('candidature');
+})->name('postuleroffre');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -31,6 +34,6 @@ Route::get('/', [OffreController::class, 'offrecountrech'])->name('accueil');
 
 Route::post('/recherche', [OffreController::class, 'recherche'])->name('recherchejob');
 
-/* Route::get('/candidature', [CandidatureController::class, '']); */
+/*Route::get('/candidature', [CandidatureController::class, '']); */
 
 Route::get('/offre/{id}', [OffreController::class, 'rechoffre'])->name('detailoffre');

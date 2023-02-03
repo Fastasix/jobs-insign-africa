@@ -91,4 +91,7 @@ body {
     position: relative;
     height: fit-content;
 }
+.home-icon-style{
+    border-radius:6px;
+}
 }

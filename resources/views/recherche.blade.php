@@ -1,6 +1,4 @@
 @extends('template')
-@section('navbar')
-@endsection
 @section('contenu')
 <section class="home">
     <div class="search-result">
@@ -44,15 +42,21 @@
         <div class="search-result-presentation">
             @foreach($research as $resultshow)
             <div class="container-research">
-                <div class="research-title"><h2>{{$resultshow->titre}}</h2></div>
-                <div class="research-contract"><h3>{{$resultshow->contrat}}</h3></div>
-                <div class="research-pays"><h4>{{$resultshow->pays}}</h4></div>
+                <div class="research-title"><h2>Titre : {{$resultshow->titre}}</h2></div>
+                <div class="research-contract"><h3>Type de contrat : {{$resultshow->contrat}}</h3></div>
+                <div class="research-pays"><h4>Pays : {{$resultshow->pays}}</h4></div>
+                <div class="apply-date"><h4>Date d'échéance : {{$resultshow->date_echeance}}</h4></div>
+                <div class="created-date"><h4>Date d'émission : {{$resultshow->date_emission}}</h4></div>
+                <div class="position-cross-plus">
+                    <form action="{{route('detailoffre', [$resultshow->id])}}" method="get">
+                        <input type="submit" name="{{$resultshow->id}}" class="link-format-cross" value="+">
+                    </form>
+                </div>
             </div>
             @endforeach
         </div>
     </div>
 </section>
-@section('footer')
 @endsection
 <script>
     var link = document.createElement('link');
