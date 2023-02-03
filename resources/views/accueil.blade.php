@@ -34,7 +34,7 @@
             <div class="apply-job">
                 <div class="apply-job-title"><h4>Je dépose une candidature</h4></div>
                 <div class="hr-style-cut-2"></div>
-                <div class="apply-job-button"><a href="#" class="a-text-decoration-none">Je postule</a></div>
+                <div class="apply-job-button"><a href="{{route('candidature')}}" class="a-text-decoration-none">Je postule</a></div>
             </div>
         </div>
         <div class="position-last-job-container">

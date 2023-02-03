@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/candidature', function () {
     return view('candidature');
-})->name('postuleroffre');
+})->name('candidature');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

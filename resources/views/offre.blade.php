@@ -17,7 +17,7 @@
             <div class="title-text">Descriptif du poste :</div>
             <div class="text-offer">{{$offreid->description_poste}}</div>
             <div class="apply-offer-button-position">
-                <div class="offer-apply-button"><a href="{{route('postuleroffre')}}" class="text-decoration-a">Je postule</a></div>
+                <div class="offer-apply-button"><a href="{{route('candidature')}}" class="text-decoration-a">Je postule</a></div>
                 <div class="position-back-for-button">
                         <a href="{{route('detailoffre', [$offreidpre])}}"><img src="{{asset('assets/image/left-arrow.png')}}" alt="backward-arrow" title="Offre précédente"></a>
                         <a href="{{route('detailoffre', [$offreidsuiv])}}"><img src="{{asset('assets/image/right-arrow.png')}}" alt="forward-arrow" title="Offre suivante"></a>
