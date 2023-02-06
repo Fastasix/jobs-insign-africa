@@ -1,4 +1,6 @@
 @extends('template')
+@section('navbar')
+@endsection
 @section('contenu')
 <section class="home">
     <div class="search-result">
@@ -57,6 +59,8 @@
         </div>
     </div>
 </section>
+@endsection
+@section('footer')
 @endsection
 <script>
     var link = document.createElement('link');

@@ -7,10 +7,9 @@
   <link href="{{ asset('assets/css/template.css') }}" rel="stylesheet">
 </head>
 <body>
-    @section('navbar')
-    @show
 <section>
 <nav class="nav-menu">
+    @yield('navbar')
     <div class="menu-select">
         <div class="home-link"><a href="{{route('accueil')}}"><img src="{{asset('assets/image/logo.png')}}" alt="logo" class="home-icon-style"></a></div>
     </div>
@@ -30,6 +29,7 @@
 @yield('contenu')
 <section>
 <footer class="footer-class">
+    @yield('footer')
         <div class="footer-copyright">@ copyright Insign Africa</div>
         <div class="footer-social-media">
             <a href="https://www.youtube.com/@insignafrica3816">
@@ -37,6 +37,7 @@
             </a>
         </div>
     </div>
-<section>
+
+</section>
 </body>
 </html>

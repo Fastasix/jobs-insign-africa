@@ -1,0 +1,50 @@
+.home {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    display: grid;
+    margin: 130px auto 0 auto;
+}
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 980px;
+    height: auto;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 10%;
+}
+.form-disposition {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 0 0;
+}
+.form-separation-1 {
+    float: left;
+    gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 25px 50px 25px 0;
+}
+.form-separation-2 {
+    float: right;
+    gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 25px 0 25px 50px;
+}
+.submit-position {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 25px 0 25px 0;
+}
+.submit-style {
+    width: 200px;
+    text-decoration: none;
+    background: yellow;
+    border: none;
+    border-radius: 6px;
+    height: 25px;
+}

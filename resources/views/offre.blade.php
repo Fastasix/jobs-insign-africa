@@ -3,6 +3,8 @@
     $offreidsuiv = $offreid->id + 1;
 @endphp
 @extends('template')
+@section('navbar')
+@endsection
 @section('contenu')
 <section class="home">
     <div class="position-container-offre">
@@ -26,6 +28,8 @@
         </div>
     </div>
 </section>
+@endsection
+@section('footer')
 @endsection
 <script>
     var link = document.createElement('link');

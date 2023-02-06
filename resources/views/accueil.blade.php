@@ -1,4 +1,6 @@
 @extends('template')
+@section('navbar')
+@endsection
 @section('contenu')
     <section class="home">
         <div class="div-job-counter">
@@ -44,6 +46,7 @@
                 </div>
                 <div class="hr-style-cut-3"></div>
                 <div class="position-last-job">
+                    @if ($offrescount >= 1)
                     @foreach($rechercherecent as $troisjobs)
                     <div class="last-job">
                         <div class="last-job-title"><h3>{{$troisjobs->titre}}</h3></div>
@@ -56,11 +59,16 @@
                         </form>
                     </div>
                     @endforeach
+                    @else
+                    <div class="no-more-job"><h2>Il y a actuellement plus de jobs disponible. Veuillez revenir plus tard pour en trouver de nouveau.</h2></div>
+                    @endif
                 </div>
             </div>
         </div>
     </div>
     </section>
+@endsection
+@section('footer')
 @endsection
 <script>
     var link = document.createElement('link');
