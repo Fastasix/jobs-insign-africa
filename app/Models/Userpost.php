@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Http\Models\Offre;
 
-class Offre extends Model
+class Userpost extends Model
 {
     use HasFactory;
 
-    public function users()
-    {
-        return $this->belongsToMany(Userpost::class);
+    public function offres(){
+
+        return $this->belongsToMany(Offre::class);
     }
 }

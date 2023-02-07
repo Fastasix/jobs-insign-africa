@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Userpost;
 
 class UserController extends Controller
 {
@@ -20,7 +20,7 @@ class UserController extends Controller
             'nationalite' => 'required',
         ]);
 
-        $insuser = new User;
+        $insuser = new Userpost;
         $insuser->civilite = $request->civilite;
         $insuser->lastname = $request->lastname;
         $insuser->name = $request->name;
