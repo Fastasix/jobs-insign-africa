@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OffreController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ Route::get('/', [OffreController::class, 'offrecountrech'])->name('accueil');
 
 Route::post('/recherche', [OffreController::class, 'recherche'])->name('recherchejob');
 
-/*Route::get('/candidature', [CandidatureController::class, '']); */
+Route::post('/candidature/{iddeoffre}', [OffreController::class, 'recupoffreid'])->name('postuleroffre');
+
+Route::post('/resultatformulaire', [UserController::class, 'insertuser'])->name('resultatformulaire');
 
 Route::get('/offre/{id}', [OffreController::class, 'rechoffre'])->name('detailoffre');

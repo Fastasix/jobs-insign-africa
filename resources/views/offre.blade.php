@@ -1,6 +1,7 @@
 @php
     $offreidpre = $offreid->id - 1;
     $offreidsuiv = $offreid->id + 1;
+    $iddeoffre = $offreid->id;
 @endphp
 @extends('template')
 @section('navbar')
@@ -19,7 +20,9 @@
             <div class="title-text">Descriptif du poste :</div>
             <div class="text-offer">{{$offreid->description_poste}}</div>
             <div class="apply-offer-button-position">
-                <div class="offer-apply-button"><a href="{{route('candidature')}}" class="text-decoration-a">Je postule</a></div>
+                <form action="{{route('postuleroffre', [$iddeoffre])}}" method="POST">
+                    @csrf
+                <div class="offer-apply-button"><input type="submit" value="Je postule" class="no-decoration"></div></form>
                 <div class="position-back-for-button">
                         <a href="{{route('detailoffre', [$offreidpre])}}"><img src="{{asset('assets/image/left-arrow.png')}}" alt="backward-arrow" title="Offre précédente"></a>
                         <a href="{{route('detailoffre', [$offreidsuiv])}}"><img src="{{asset('assets/image/right-arrow.png')}}" alt="forward-arrow" title="Offre suivante"></a>

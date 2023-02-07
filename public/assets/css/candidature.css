@@ -48,3 +48,19 @@
     border-radius: 6px;
     height: 25px;
 }
+.hr-style-cut {
+    border-bottom: 1px solid black;
+    width: 14%;
+    position: relative;
+    height: 1px;
+    bottom: 8px;
+    z-index: 2;
+}
+.hr-style-cut-2 {
+    border-bottom: 1px solid black;
+    width: 45%;
+    position: relative;
+    height: 1px;
+    bottom: 8px;
+    z-index: 2;
+}

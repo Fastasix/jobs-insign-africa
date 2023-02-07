@@ -90,7 +90,7 @@
 }
 .last-job-posted {
     width: 980px;
-    height: 380px;
+    height: 450px;
     background: rgba(255, 255, 255, 0.9);
     position: relative;
     border: 6px;
@@ -98,7 +98,7 @@
     border-color: black;
     top: 55px;
     margin-bottom: 15%;
-    border-radius:6px;
+    border-radius: 6px;
 }
 .last-job-posted-title{
     position: relative;
@@ -172,17 +172,17 @@
     border-style: solid;
     border-color: black;
     width: 627px;
-    height: 210px;
+    height: auto;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    border-radius:6px;
+    border-radius: 6px;
 }
 .position-last-job {
     position: relative;
     display: flex;
     gap: 50px;
-    top: 35px;
+    top: 25px;
     align-items: center;
     justify-content: center;
     margin-left: 50px;
@@ -212,14 +212,18 @@
 .last-job-created-date{
 
 }
-.link-format-cross{
+.link-format-cross {
     position: relative;
     height: 50px;
     width: 50px;
     background-color: yellow;
-    left: 160px;
-    bottom: 155px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+}
+.last-job-submit {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    height: auto;
 }

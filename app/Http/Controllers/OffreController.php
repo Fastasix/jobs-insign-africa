@@ -71,6 +71,10 @@ class OffreController extends Controller
         }
     }
 
+    public function recupoffreid($iddeoffre){
+        $offredeid = Offre::all()->where('id', $iddeoffre)->first();
+        return view('candidature', compact('offredeid'));
+    }
 
 
     /**

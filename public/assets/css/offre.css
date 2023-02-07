@@ -52,17 +52,24 @@
     max-width: fit-content;
     position: relative;
     border-radius: 6px;
-    margin: 0 auto;
+    margin: 0px auto;
 }
 .apply-offer-button-position {
     position: relative;
     display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.text-decoration-a{
+.no-decoration{
     text-decoration:none;
     color:black;
+    background:none;
+    border:none;
+    cursor:pointer;
 }
-.position-back-for-button{
-    position:relative;
-    gap:10px;
+.position-back-for-button {
+    position: relative;
+    gap: 930px;
+    display: flex;
+    justify-content: right;
 }

@@ -54,9 +54,11 @@
                         <div class="last-job-country"><h5>Pays {{$troisjobs->pays}}</h5></div>
                         <div class="last-job-apply-date"><h5> Date d'échéance : {{$troisjobs->date_echeance}}</h5></div>
                         <div class="last-job-created-date"><h5>Date d'émission : {{$troisjobs->date_emission}}</h5></div>
-                        <form action="{{route('detailoffre', [$troisjobs->id])}}" method="get">
-                        <input type="submit" name="{{$troisjobs->id}}" class="link-format-cross" value="+">
-                        </form>
+                        <div class="last-job-submit">
+                            <form action="{{route('detailoffre', [$troisjobs->id])}}" method="get">
+                                <input type="submit" name="{{$troisjobs->id}}" class="link-format-cross" value="+">
+                            </form>
+                        </div>
                     </div>
                     @endforeach
                     @else
