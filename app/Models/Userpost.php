@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Models\Offre;
+use App\Models\Offre;
+
 
 class Userpost extends Model
 {

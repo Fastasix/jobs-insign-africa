@@ -25,6 +25,10 @@ return new class extends Migration
             $table->string('email');
             $table->timestamps();
         });
+        Schema::table('userposts', function(Blueprint $table){
+            $table->unsignedBigInteger('offres_id');
+            $table->foreign('offres_id')->references('id')->on('offres')->onDelete('cascade');
+        });
     }
 
     /**
@@ -34,6 +38,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('userpost');
+        Schema::table('userposts', function (Blueprint $table) {
+            $table->dropForeign(['offres_id']);
+            $table->dropColumn('offres_id');
+        });
+        Schema::dropIfExists('userposts');
     }
 };

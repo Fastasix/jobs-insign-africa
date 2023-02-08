@@ -29,6 +29,7 @@ class UserController extends Controller
         $insuser->datenaissance = $request->datenaissance;
         $insuser->paysresidence = $request->paysresidence;
         $insuser->nationalite = $request->nationalite;
+        $insuser->offres_id = $request->iddeloffre;
         $insuser->save();
         return view('resultatformulaire');
 
