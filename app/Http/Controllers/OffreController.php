@@ -76,7 +76,11 @@ class OffreController extends Controller
         return view('candidature', compact('offredeid'));
     }
 
-
+    public function listeoffre(){
+        $listeoffre = Offre::all();
+        $offrescount = Offre::all()->count();
+        return view('listejobs', compact('listeoffre', 'offrescount'));
+    }
     /**
      * Show the form for editing the specified resource.
      *

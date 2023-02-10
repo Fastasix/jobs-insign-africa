@@ -1,0 +1,42 @@
+.home{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 130px 0 0 0;
+}
+.main-container{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 980px;
+    height: auto;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 10%;
+}
+.hr-style-cut {
+    border-bottom: 1px solid black;
+    width: 25%;
+    position: relative;
+    height: 1px;
+    bottom: 10px;
+    z-index: 2;
+}
+.hr-style-cut-2 {
+    border-bottom: 1px solid black;
+    width: 20%;
+    position: relative;
+    height: 1px;
+    bottom: 10px;
+    z-index: 2;
+}
+.home-button {
+    background-color: yellow;
+    padding: 5px;
+    max-width: fit-content;
+    top: 8px;
+    position: relative;
+    border-radius: 6px;
+    margin: 0 auto 0 auto;
+}
+.no-decoration{
+    text-decoration: none;
+}

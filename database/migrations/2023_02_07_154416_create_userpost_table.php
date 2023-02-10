@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamps();
         });
         Schema::table('userposts', function(Blueprint $table){
-            $table->unsignedBigInteger('offres_id');
+            $table->unsignedBigInteger('offres_id')->nullable();
             $table->foreign('offres_id')->references('id')->on('offres')->onDelete('cascade');
         });
     }

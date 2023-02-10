@@ -15,13 +15,13 @@
     </div>
     <div class="menu-level">
         <ul class="list-menu">
-            <li><a href="#" class="link-underline-eraser">Qui sommes nous ?</a></li>
+            <li><a href="{{route('quisommesnous')}}" class="link-underline-eraser">Qui sommes nous ?</a></li>
             <li><span class="separate-black-line"></span></li>
             <li><a href="#" class="link-underline-eraser">Nos métiers</a></li>
             <li><span class="separate-black-line"></span></li>
-            <li><a href="#" class="link-underline-eraser">Postuler à une offre</a></li>
+            <li><a href="{{route('listedesjobs')}}" class="link-underline-eraser">Postuler à une offre</a></li>
             <li><span class="separate-black-line"></span></li>
-            <li><a href="#" class="link-underline-eraser">Déposer une candidature spontanée</a></li>
+            <li><a href="{{route('candidature')}}" class="link-underline-eraser">Déposer une candidature spontanée</a></li>
         </ul>
     </div>
 </nav>

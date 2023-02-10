@@ -15,7 +15,7 @@ class CreateOffresTable extends Migration
     {
         Schema::create('offres', function (Blueprint $table) {
             $table->id();
-            $table->string('reference_offre');
+            $table->string('reference_offre')->unique();
             $table->string('titre');
             $table->date('date_emission');
             $table->date('date_echeance');

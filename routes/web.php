@@ -40,3 +40,9 @@ Route::post('/candidature/{iddeoffre}', [OffreController::class, 'recupoffreid']
 Route::post('/resultatformulaire', [UserController::class, 'insertuser'])->name('resultatformulaire');
 
 Route::get('/offre/{id}', [OffreController::class, 'rechoffre'])->name('detailoffre');
+
+Route::get('/quisommesnous', function(){
+    return view('quisommesnous');
+})->name('quisommesnous');
+
+Route::get('/listejobs', [OffreController::class, 'listeoffre'])->name('listedesjobs');
